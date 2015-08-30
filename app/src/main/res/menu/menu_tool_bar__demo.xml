@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.toolbar.ToolBar_Demo">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/next"
+        android:orderInCategory="200"
+        android:title="@string/next"
+        app:showAsAction="always"
+        android:icon="@drawable/abc_btn_radio_to_on_mtrl_000"/>
+</menu>

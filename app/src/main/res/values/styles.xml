@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Primary_Color</item>
+        <item name="colorPrimaryDark">@color/Primary_ColorDrak</item>
+        <item name="colorAccent">@color/Accent_Color</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+<style name="MyCustom_style" parent="ThemeOverlay.AppCompat.Light">
+    <item name="android:textColorPrimary">#F00</item>
+    <item name="android:textColorSecondary">#00F</item>
+</style>
+</resources>
