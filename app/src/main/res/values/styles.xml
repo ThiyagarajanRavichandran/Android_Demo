@@ -8,8 +8,9 @@
         <item name="colorAccent">@color/Accent_Color</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
-<style name="MyCustom_style" parent="ThemeOverlay.AppCompat.Light">
-    <item name="android:textColorPrimary">#F00</item>
-    <item name="android:textColorSecondary">#00F</item>
-</style>
+
+    <style name="MyCustom_style" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">#F00</item>
+        <item name="android:textColorSecondary">#00F</item>
+    </style>
 </resources>

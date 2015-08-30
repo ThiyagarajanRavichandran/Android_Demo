@@ -8,8 +8,7 @@ import android.widget.Toast;
  */
 public class Log_Toast {
 
-    public static void Toast(Context context,String sMessage)
-    {
-        Toast.makeText(context,sMessage,Toast.LENGTH_SHORT).show();
+    public static void Toast(Context context, String sMessage) {
+        Toast.makeText(context, sMessage, Toast.LENGTH_SHORT).show();
     }
 }

@@ -10,12 +10,13 @@ import android.view.MenuItem;
 import com.example.thiyagarajan.android_demo.R;
 
 public class Menu_Next extends ActionBarActivity {
-Toolbar toolbar=null;
+    Toolbar toolbar = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu__next);
-        toolbar=(Toolbar)findViewById(R.id.include);
+        toolbar = (Toolbar) findViewById(R.id.include);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -39,8 +40,7 @@ Toolbar toolbar=null;
         if (id == R.id.action_settings) {
             return true;
         }
-        if(id==android.R.id.home)
-        {
+        if (id == android.R.id.home) {
             NavUtils.navigateUpFromSameTask(this);
         }
         return super.onOptionsItemSelected(item);

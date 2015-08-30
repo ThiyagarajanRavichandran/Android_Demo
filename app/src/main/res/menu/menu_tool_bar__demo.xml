@@ -9,8 +9,8 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/next"
+        android:icon="@drawable/abc_btn_radio_to_on_mtrl_000"
         android:orderInCategory="200"
         android:title="@string/next"
-        app:showAsAction="always"
-        android:icon="@drawable/abc_btn_radio_to_on_mtrl_000"/>
+        app:showAsAction="always" />
 </menu>

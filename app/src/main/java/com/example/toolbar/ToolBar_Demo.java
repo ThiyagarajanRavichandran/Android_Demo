@@ -15,7 +15,8 @@ public class ToolBar_Demo extends ActionBarActivity {
     Toolbar toolbar = null;
     Intent intent = null;
     Navigation_Fragment navigation_fragment = null;
-DrawerLayout drawerLayout=null;
+    DrawerLayout drawerLayout = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +25,8 @@ DrawerLayout drawerLayout=null;
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         navigation_fragment = (Navigation_Fragment) getSupportFragmentManager().findFragmentById(R.id.Navigation_fragment);
-        drawerLayout=(DrawerLayout)findViewById(R.id.drawer_layout);
-        navigation_fragment.setup(R.id.Navigation_fragment,drawerLayout,toolbar);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigation_fragment.setup(R.id.Navigation_fragment, drawerLayout, toolbar);
     }
 
     @Override

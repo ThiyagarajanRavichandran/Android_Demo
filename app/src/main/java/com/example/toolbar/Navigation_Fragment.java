@@ -19,15 +19,15 @@ import com.example.thiyagarajan.android_demo.R;
  */
 public class Navigation_Fragment extends Fragment {
 
-    private ActionBarDrawerToggle actionBarDrawerToggle = null;
-    private DrawerLayout drawerLayout = null;
     public static final String sFile_PrefName = "My_Pref";
     public static final String sKEY_USER_LERANED = "user_drawer_learned";
     public boolean mUser_Drawer;
     public boolean onSavedInstance;
+    View viewgroup;
+    private ActionBarDrawerToggle actionBarDrawerToggle = null;
+    private DrawerLayout drawerLayout = null;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
-    View viewgroup;
 
     public Navigation_Fragment() {
         // Required empty public constructor
@@ -60,28 +60,27 @@ public class Navigation_Fragment extends Fragment {
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-                
+
                 getActivity().invalidateOptionsMenu();
-                
+
             }
 
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-if (!mUser_Drawer) {
+                if (!mUser_Drawer) {
                     mUser_Drawer = true;
                     storedTopref(getActivity(), sKEY_USER_LERANED, mUser_Drawer + "");
                 }
                 getActivity().invalidateOptionsMenu();
-                
+
             }
 
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 super.onDrawerSlide(drawerView, slideOffset);
-                if(slideOffset<0.6)
-                {
-                    toolbar.setAlpha(1-slideOffset);
+                if (slideOffset < 0.6) {
+                    toolbar.setAlpha(1 - slideOffset);
                 }
             }
         };
@@ -97,6 +96,11 @@ if (!mUser_Drawer) {
             }
         });
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     public void storedTopref(Context context, String sPref_Name, String sPref_Value) {

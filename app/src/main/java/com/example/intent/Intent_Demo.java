@@ -12,8 +12,9 @@ import android.widget.Button;
 import com.example.thiyagarajan.android_demo.R;
 
 public class Intent_Demo extends ActionBarActivity implements View.OnClickListener {
-Button bn_Sms=null;
-    Intent intent=null;
+    Button bn_Sms = null;
+    Intent intent = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +22,11 @@ Button bn_Sms=null;
         findViewById();
         setOnclickListener(this);
     }
-private void findViewById()
-    {
-        bn_Sms=(Button)findViewById(R.id.bn_Sms);
+
+    private void findViewById() {
+        bn_Sms = (Button) findViewById(R.id.bn_Sms);
     }
+
     private void setOnclickListener(Intent_Demo intent_demo) {
         bn_Sms.setOnClickListener(intent_demo);
     }
@@ -53,15 +55,14 @@ private void findViewById()
 
     @Override
     public void onClick(View v) {
-switch (v.getId())
-{
-    case R.id.bn_Sms:
-intent=new Intent(Intent.ACTION_VIEW, Uri.parse("smsto:"));
-        intent.setType("vnd.android-dir/mms-sms");
-        intent.putExtra("address", new String("0123456789;3393993300"));
-        intent.putExtra("sms_body","Hai");
-        break;
-}
+        switch (v.getId()) {
+            case R.id.bn_Sms:
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("smsto:"));
+                intent.setType("vnd.android-dir/mms-sms");
+                intent.putExtra("address", new String("0123456789;3393993300"));
+                intent.putExtra("sms_body", "Hai");
+                break;
+        }
         startActivity(intent);
     }
 }
